@@ -1,0 +1,19 @@
+import random as r
+def numbergenerator():
+    x = r.randrange(1,21,1)
+    x =int(x)
+    return x
+print("Do you want to play the game y/n :")
+response = input()
+while response == 'y':
+    num = numbergenerator()
+    print("Guess the number between 1 and 20")
+    guess = input()
+    if guess == num :
+        print("congrats you won")
+    else :
+        print("you lose","DO you want to play again ?y/n","the number was ",num)
+        response = input()
+        if response!='y' :
+            print("enter a valid input")
+            response = input()
